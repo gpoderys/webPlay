@@ -1,12 +1,27 @@
+.top-panel {
+    text-align: center;
+    padding: 20px;
+}
+
+.sketch-widow {
+
+    height: auto;
+
+}
 .container {
     display: flex;
-
+    max-width: 100;
+    max-height: 900px;
+    justify-content: center;
 }
 
 .container-item {
     background-color: white;
-    width: 100px;
-    height: 100px;
-    border-color: black;
-    border-style: solid;
+    min-height: 10px;
+    min-width: 10px;
+    border: 1px grey solid;
+}
+
+.container-item.colored {
+    background-color: lightcoral;
 }
