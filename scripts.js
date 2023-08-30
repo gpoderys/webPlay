@@ -1,4 +1,4 @@
-let squareLength = 50
+let squareLength = 60
 
 const body = document.querySelector('.sketch-window')
 for(let i= 0; i<squareLength; i++) {
@@ -15,13 +15,19 @@ container.forEach(container => {
     container.appendChild(makeDiv)
 }
 }) 
-
-const containerItem = document.querySelectorAll('.container-item')
-for (let i = 0; i < containerItem.length; i++){
-    // containerItem[i].style.maxHeight = 
-}
-
+// missing a condition that selected item is a container-item class
+// best way seems to query for the selected items class
+// and check if it the correct one
 addEventListener("mouseover", (event) => {
-    const text = console.log(event.target)
     event.target.classList.add('colored')
+    tmp = event.target.style.opacity
+    event.target.style.opacity = +tmp + 0.1
 });
+
+const resetButton = document.querySelector('.reset')
+    resetButton.addEventListener('click', () => {
+        const colored = document.querySelectorAll('.colored')
+        colored.forEach(colored => {
+            colored.classList.remove('colored')
+        }) 
+    });

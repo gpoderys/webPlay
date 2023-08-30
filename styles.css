@@ -1,10 +1,13 @@
+body{
+    background-color: grey ;
+}
+
 .top-panel {
     text-align: center;
     padding: 20px;
 }
 
 .sketch-widow {
-
     height: auto;
 
 }
@@ -23,5 +26,6 @@
 }
 
 .container-item.colored {
-    background-color: lightcoral;
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
 }
