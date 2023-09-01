@@ -19,8 +19,6 @@ container.forEach(container => {
 addEventListener("mouseover", (event) => {
     if (event.target.classList.value === 'container-item' || event.target.classList.value === 'container-item colored'){
         event.target.classList.add('colored')
-        // tmp = event.target.style.opacity
-        // event.target.style.opacity = +tmp + 0.2
     } 
 });
 
@@ -29,6 +27,5 @@ const resetButton = document.querySelector('.reset')
         const colored = document.querySelectorAll('.container-item.colored')
         colored.forEach(colored => {
             colored.classList.remove('colored')
-            // colored.style.opacity = 1
         }) 
     });
