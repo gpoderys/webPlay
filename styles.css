@@ -1,5 +1,5 @@
 body{
-    background-color: grey ;
+    background-color: white;
 }
 
 .top-panel {
@@ -27,5 +27,4 @@ body{
 
 .container-item.colored {
     background-color: rgb(0, 0, 0);
-    opacity: 0;
 }

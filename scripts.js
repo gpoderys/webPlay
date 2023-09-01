@@ -15,19 +15,20 @@ container.forEach(container => {
     container.appendChild(makeDiv)
 }
 }) 
-// missing a condition that selected item is a container-item class
-// best way seems to query for the selected items class
-// and check if it the correct one
+
 addEventListener("mouseover", (event) => {
-    event.target.classList.add('colored')
-    tmp = event.target.style.opacity
-    event.target.style.opacity = +tmp + 0.1
+    if (event.target.classList.value === 'container-item' || event.target.classList.value === 'container-item colored'){
+        event.target.classList.add('colored')
+        // tmp = event.target.style.opacity
+        // event.target.style.opacity = +tmp + 0.2
+    } 
 });
 
 const resetButton = document.querySelector('.reset')
     resetButton.addEventListener('click', () => {
-        const colored = document.querySelectorAll('.colored')
+        const colored = document.querySelectorAll('.container-item.colored')
         colored.forEach(colored => {
             colored.classList.remove('colored')
+            // colored.style.opacity = 1
         }) 
     });
